@@ -1,0 +1,22 @@
+{
+  "name": "auspost-mainfestcodechange",
+  "version": "0.0.2",
+  "description": "Bulk update the service charge code for a submitted AusPost manifest",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.20.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terrywest/AusPost-MainfestServiceCodeUpdate.git"
+  },
+  "author": "Terry West",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/terrywest/AusPost-MainfestServiceCodeUpdate/issues"
+  },
+  "homepage": "https://github.com/terrywest/AusPost-MainfestServiceCodeUpdate#readme"
+}
