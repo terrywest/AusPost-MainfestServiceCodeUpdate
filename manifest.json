@@ -2,10 +2,10 @@
     "order_reference": "12345",
     "shipments": [
         {
-            "shipment_id": "SHIPMENTID"
+            "shipment_id": "SHIPMENT_ID"
         },
         {
-            "shipment_id": "SHIPMENTID"
+            "shipment_id": "SHIPMENT_ID"
         }
     ]
 }

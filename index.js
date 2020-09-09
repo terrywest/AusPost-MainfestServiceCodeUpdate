@@ -2,27 +2,24 @@ const axios = require('axios');
 const fs = require('fs');
 const manifest = require('./manifest.json');
 
-// console.log(manifest.shipments)
-
 // Set the script details here
-const key = "43ed8822-6de0-41ab-9d43-0656550c95b3";
-const pass = "A3294112";
-const accNum = "0005417456";
-const oldCode = "3D35";
-const newCode = "3D85";
-const shipID = "y2IK0EbemHMAAAFz5RIdruF1";
+const key = "APIKEY"; //AusPost API Key
+const pass = "APIPASS"; //AusPost API Password
+const accNum = "ACCNUMBER"; // Auspost account number
+const oldCode = "3D35"; // Old Service Code that needs correcting
+const newCode = "3D85"; // New replacement service code
+const apicreds = Buffer.from(`${key}:${pass}`).toString('base64'); // Encodes credetials to Base64
 
-runRfunction();
+// Loops over supplied manifest shipments and runs furnction
+manifest.shipments.map(item => {
+  runRfunction(item.shipment_id);
+})
 
-async function runRfunction() {
 
-  // Encode credetials to Base64
-  const apicreds = Buffer.from(`${key}:${pass}`).toString('base64');
-
+async function runRfunction(shipID) {
   // Query AP API to get shipment details
   const getURL = `https://digitalapi.auspost.com.au/shipping/v1/shipments?shipment_ids=${shipID}`;
   const orginalShip = await makeAPIRequest(getURL, "get", apicreds, accNum);
-  // console.log(orginalShip)
 
   // Modify shipment details 
   let newShipment = {...orginalShip};
@@ -39,18 +36,15 @@ async function runRfunction() {
     count++
   })
 
-  
-  
   if(update === true){
     // Push updated shipment to AP API
     const putURL = `https://digitalapi.auspost.com.au/shipping/v1/shipments/${shipID}`;
     const response = await makeAPIRequest(putURL, "put", apicreds, accNum, newShipment.shipments[0]);
     return response
   }
-
-
 }
 
+// API request function
 async function makeAPIRequest(URL, method, apicreds, accNum, data) {
    options = {
     headers: {
@@ -62,7 +56,6 @@ async function makeAPIRequest(URL, method, apicreds, accNum, data) {
    }
 
    if(method === "put") { // Switch for get vs put request
-
     return axios.put(URL, data, options)
     .then(
       function(res) {
@@ -97,6 +90,4 @@ async function makeAPIRequest(URL, method, apicreds, accNum, data) {
       console.log('Error making get request:', err);
     });
    }
-
-
 }
