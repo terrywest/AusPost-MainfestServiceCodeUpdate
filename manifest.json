@@ -1,0 +1,11 @@
+{
+    "order_reference": "12345",
+    "shipments": [
+        {
+            "shipment_id": "SHIPMENT_ID"
+        },
+        {
+            "shipment_id": "SHIPMENT_ID"
+        }
+    ]
+}
