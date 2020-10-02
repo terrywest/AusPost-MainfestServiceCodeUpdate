@@ -1,6 +1,6 @@
 {
   "name": "auspost-mainfestcodechange",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Bulk update the service charge code for a submitted AusPost manifest",
   "main": "index.js",
   "dependencies": {
