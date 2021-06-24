@@ -51,7 +51,6 @@ async function makeAPIRequest(URL, method, apicreds, accNum, data) {
       "method": method,
       "authorization": `Basic ${apicreds}`,
       "account-number": accNum,
-      'User-Agent': 'Neto' 
     }
    }
 

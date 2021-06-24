@@ -1,9 +1,11 @@
 # AusPost-MainfestServiceCodeUpdate
 A tool for bulk updating Auspost service codes on shipment already created
 
-With AusPost's API it is possible for the accounts service code to change after a consignment has been submitted but before the order (manifet) has been created. This often causes and issue where an order cannot be created with those shipment, possibly leaving the merchant with unesscerry unmanifested fees.
+With the AusPost's API it is possible for the service code's on the account to change after a consignment has been submitted but before the order (manifest) has been created. This often causes an issue where an order cannot be created with those shipments, possibly leaving the merchant with unesscerry unmanifested fees.
 
-This script allows you to quickly update the services code on a given list of shipments.
+This script allows you to quickly update the services code on a given list of unmanifested shipments.
+
+*v1.0.0
 
 ### Instructions
 *To use this script you will need to have node installed*
@@ -18,4 +20,4 @@ This script allows you to quickly update the services code on a given list of sh
 ### Common Errors
 
 ###### 412 status code response 
-This mean a precodition failed and will usually happen if the new services code is not available on the account
+- This mean a precodition failed and will usually happen if the new services code is not available on the account
