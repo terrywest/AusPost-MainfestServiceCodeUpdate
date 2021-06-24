@@ -1,7 +1,7 @@
 # AusPost-MainfestServiceCodeUpdate
 A tool for bulk updating Auspost service codes on shipment already created
 
-With the AusPost's API it is possible for the service code's on the account to change after a consignment has been submitted but before the order (manifest) has been created. This often causes an issue where an order cannot be created with those shipments, possibly leaving the merchant with unesscerry unmanifested fees.
+With the AusPost API it is possible for the service code's on the account to change after a consignment has been submitted but before the order (manifest) has been created. This often causes an issue where an order cannot be created with those shipments, possibly leaving the merchant with unesscerry unmanifested fees.
 
 This script allows you to quickly update the services code on a given list of unmanifested shipments.
 

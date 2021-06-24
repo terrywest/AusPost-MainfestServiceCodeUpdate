@@ -4,7 +4,7 @@
   "description": "Bulk update the service charge code for a submitted AusPost manifest",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.21.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
