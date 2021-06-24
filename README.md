@@ -5,8 +5,6 @@ With the AusPost's API it is possible for the service code's on the account to c
 
 This script allows you to quickly update the services code on a given list of unmanifested shipments.
 
-*v1.0.0
-
 ### Instructions
 *To use this script you will need to have node installed*
 
