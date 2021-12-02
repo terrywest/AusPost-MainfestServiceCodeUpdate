@@ -12,7 +12,7 @@ This script allows you to quickly update the services code on a given list of un
 2. Install dependencies `npm install`
 3. Set the script variables in index.js
 4. Add consignment list to manifest.json
-5. Run script (You can use code runner for in VScode https://github.com/formulahendry/vscode-code-runner.git)
+5. Run script `node index.js` (You can use code runner for in VScode https://github.com/formulahendry/vscode-code-runner.git)
 
 
 ### Common Errors
